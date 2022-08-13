@@ -18,9 +18,9 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 HOST  = "0.0.0.0"
 PORT = 8080
-env.APP_ACCESS_KEY
-app_access_key = env.APP_ACCESS_KEY
-app_secret = env.APP_SECRET
+
+app_access_key = 'o3292djknqwnf32oiwckm'
+app_secret = 'erknjefeilmlweknjlma'
 
 
 
@@ -62,7 +62,7 @@ class TokenGenerator:
              role = sys.argv[2]
 
         
-class HTTPHandler(BaseHTTPRequestHandler): 
+class HTTPHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         
         if self.path.endswith('/getManagementToken'):
@@ -70,7 +70,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
             managementToken = tokenGen.generateManagementToken()
        
             response = {
-                 "token": str(managementToken) 
+                 "token": str(managementToken)
             }
             jsonResponse = json.dumps(response)
             
@@ -103,7 +103,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
         accessToken = tokenGen.generateAccessToken(room_id, user_id, role)
        
         response = {
-            "token": str(accessToken) 
+            "token": str(accessToken)
         }
         
         jsonResponse = json.dumps(response)
