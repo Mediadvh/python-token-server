@@ -16,7 +16,7 @@ import cgi
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
-HOST  = "learnalize-token-server.herokuapp.com"
+HOST = process.env.HOST
 PORT = process.env.PORT || 8080
 
 app_access_key = 'o3292djknqwnf32oiwckm'
