@@ -17,7 +17,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
 HOST = process.env.HOST
-PORT = process.env.PORT || 8080
+PORT = process.env.PORT 
 
 app_access_key = 'o3292djknqwnf32oiwckm'
 app_secret = 'erknjefeilmlweknjlma'
