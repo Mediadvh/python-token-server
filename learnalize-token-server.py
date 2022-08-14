@@ -120,7 +120,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
      
-    server = HTTPServer((str(HOST), PORT), HTTPHandler)
+    server = HTTPServer((HOST, PORT), HTTPHandler)
     print("Server started on port " + str(PORT))
     server.serve_forever()
    
