@@ -15,8 +15,8 @@ import cgi
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
-HOST = "0.0.0.0"
-PORT = 5000
+HOST = process.env.HOST
+PORT = process.env.PORT
 
 app_access_key = 'o3292djknqwnf32oiwckm'
 app_secret = 'erknjefeilmlweknjlma'
@@ -120,7 +120,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
      
-    server = HTTPServer((HOST, PORT), HTTPHandler)
+    server = HTTPServer((str(HOST), PORT), HTTPHandler)
     print("Server started on port " + str(PORT))
     server.serve_forever()
    
