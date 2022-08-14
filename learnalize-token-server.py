@@ -6,7 +6,6 @@ This is a temporary script file.
 """
 #!/usr/bin/env python3
 
-import process
 import jwt
 import uuid
 import datetime
@@ -16,8 +15,8 @@ import cgi
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
-HOST = process.env.HOST
-PORT = process.env.PORT 
+HOST = 0.0.0.0
+PORT = 5000
 
 app_access_key = 'o3292djknqwnf32oiwckm'
 app_secret = 'erknjefeilmlweknjlma'
