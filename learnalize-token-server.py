@@ -14,9 +14,10 @@ import sys
 import cgi
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import os
-
-HOST = os.getenv("HOST")
-PORT = os.getenv("PORT")
+#os.getenv("HOST")
+#os.getenv("PORT")
+HOST = "0.0.0.0"
+PORT = 8081
 
 app_access_key = 'o3292djknqwnf32oiwckm'
 app_secret = 'erknjefeilmlweknjlma'
