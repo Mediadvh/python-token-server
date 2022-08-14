@@ -15,7 +15,7 @@ import cgi
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
-HOST = 0.0.0.0
+HOST = "0.0.0.0"
 PORT = 5000
 
 app_access_key = 'o3292djknqwnf32oiwckm'
