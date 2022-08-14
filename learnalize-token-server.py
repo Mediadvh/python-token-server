@@ -18,7 +18,7 @@ import os
 #os.getenv("PORT")
 HOST = os.environ['HOST']
 #print(str(os.environ['HOST']))
-PORT = os.environ['PORT']
+PORT = int(os.environ['PORT'])
 #print(str(os.environ['PORT']))
 
 app_access_key = 'o3292djknqwnf32oiwckm'
