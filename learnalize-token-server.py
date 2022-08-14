@@ -16,8 +16,8 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import os
 #os.getenv("HOST")
 #os.getenv("PORT")
-HOST = os.getenv("HOST")
-PORT = os.getenv("PORT")
+HOST = os.environ['HOST']
+PORT = os.environ['PORT']
 
 app_access_key = 'o3292djknqwnf32oiwckm'
 app_secret = 'erknjefeilmlweknjlma'
@@ -121,7 +121,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
    
-    server = HTTPServer((HOST, int(PORT)), HTTPHandler)
+    server = HTTPServer((HOST, PORT), HTTPHandler)
     print("Server started on port " + str(PORT))
     server.serve_forever()
    
