@@ -80,6 +80,14 @@ class HTTPHandler(BaseHTTPRequestHandler):
             self.send_header("content-type", "application/json")
             self.end_headers()
             self.wfile.write(bytes(jsonResponse ,"utf-8"))
+        else:
+            self.send_response(200)
+            self.send_header("content-type", "text/html")
+            self.end_headers()
+            self.wfile.write(bytes("<html><head><title>Title goes here.</title></head>/html>","utf-8"))
+        
+           
+            
        
     def do_POST(self):
         #TODO implement
