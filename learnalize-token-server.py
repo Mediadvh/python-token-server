@@ -16,7 +16,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import os
 #os.getenv("HOST")
 #os.getenv("PORT")
-HOST = str(os.environ['HOST'])
+HOST = os.environ['HOST']
 #print(str(os.environ['HOST']))
 PORT = os.environ['PORT']
 #print(str(os.environ['PORT']))
