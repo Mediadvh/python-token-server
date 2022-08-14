@@ -16,8 +16,8 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import os
 #os.getenv("HOST")
 #os.getenv("PORT")
-HOST = "0.0.0.0"
-PORT = 5000
+HOST = os.getenv("HOST")
+PORT = os.getenv("PORT")
 
 app_access_key = 'o3292djknqwnf32oiwckm'
 app_secret = 'erknjefeilmlweknjlma'
