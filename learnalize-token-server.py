@@ -16,10 +16,10 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import os
 #os.getenv("HOST")
 #os.getenv("PORT")
-HOST = "0.0.0.0"
-print(str(os.environ['HOST']))
-PORT = 8080
-print(str(os.environ['PORT']))
+HOST = str(os.environ['HOST'])
+#print(str(os.environ['HOST']))
+PORT = os.environ['PORT']
+#print(str(os.environ['PORT']))
 
 app_access_key = 'o3292djknqwnf32oiwckm'
 app_secret = 'erknjefeilmlweknjlma'
@@ -123,7 +123,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
    
-    server = HTTPServer((HOST, PORT), HTTPHandler)
+    server = HTTPServer(HOST,PORT, HTTPHandler)
     print("Server started on port " + str(PORT))
     server.serve_forever()
    
