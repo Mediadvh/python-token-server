@@ -13,10 +13,10 @@ import json
 import sys
 import cgi
 from http.server import HTTPServer, BaseHTTPRequestHandler
+import os
 
-
-HOST = process.env.HOST
-PORT = process.env.PORT
+HOST = os.getenv("HOST")
+PORT = os.getenv("PORT")
 
 app_access_key = 'o3292djknqwnf32oiwckm'
 app_secret = 'erknjefeilmlweknjlma'
