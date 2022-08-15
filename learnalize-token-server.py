@@ -21,8 +21,8 @@ HOST = os.environ['HOST']
 PORT = int(os.environ['PORT'])
 #print(str(os.environ['PORT']))
 
-app_access_key = 'o3292djknqwnf32oiwckm'
-app_secret = 'erknjefeilmlweknjlma'
+app_access_key = os.environ['APP_ACCESS_KEY']
+app_secret = os.environ['APP_SECRET']
 
 
 
