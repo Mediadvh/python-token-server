@@ -84,7 +84,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("content-type", "text/html")
             self.end_headers()
-            self.wfile.write(bytes("<html><head><title>Title goes here.</title></head>/html>","utf-8"))
+            self.wfile.write(bytes("<html><head><title>Title goes here.</title></head></html>","utf-8"))
         
            
             
